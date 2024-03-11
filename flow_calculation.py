@@ -3,6 +3,9 @@ import numpy as np
 import utils
 from collections import deque
 
+from VideoFlow.configs.multiframes_sintel_submission import get_cfg
+from VideoFlow.core.Networks.MOFNetStack import network
+
 def calc_sma(input, ma, window_size=5):
     if not hasattr(calc_sma, "counter"):
         calc_sma.buffer = deque(maxlen=window_size)
@@ -21,6 +24,13 @@ def calc_flow_classical(prev_image, next_image):
     """Accepts two grayscale images of water and calculates the avg flow in the specified direction"""
     flow = cv2.calcOpticalFlowFarneback(prev_image, next_image, None, 0.5, 3, 15, 3, 5, 1.1, 0)
     return flow
+
+class AI_Flow():
+    def __init__(self):
+        self.model = None
+    
+    def calc_flow_ai(self, prev_image, next_image):
+        flow = 
 
 def process_flow_angle(flow, direction=0, tolerance=(np.pi / 24)):
     """Take in flow and filter it such that we can calculate an accurate flow measure for the given direction (0 = x, 1 = y)"""

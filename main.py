@@ -47,9 +47,6 @@ def analyze_recording(recording_name, camera_intrinsics, depth, filter=lambda x,
         y_flow_mode = flow_calculation.process_flow_mode(flow, direction=1)
         x_flow_mode = flow_calculation.process_flow_mode(flow, direction=0)
 
-        if (i == 50):
-            print(1)
-
         flows.append(flow)
 
         prev_image = image

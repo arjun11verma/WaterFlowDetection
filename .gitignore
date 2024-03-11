@@ -2,3 +2,4 @@ recordings
 *.png
 __pycache__
 .vscode
+VideoFlow
