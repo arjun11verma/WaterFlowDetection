@@ -3,3 +3,4 @@ recordings
 __pycache__
 .vscode
 VideoFlow
+transfer_files.sh

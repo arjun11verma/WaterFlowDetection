@@ -30,7 +30,7 @@ class AI_Flow():
         self.model = None
     
     def calc_flow_ai(self, prev_image, next_image):
-        flow = 
+        pass
 
 def process_flow_angle(flow, direction=0, tolerance=(np.pi / 24)):
     """Take in flow and filter it such that we can calculate an accurate flow measure for the given direction (0 = x, 1 = y)"""
